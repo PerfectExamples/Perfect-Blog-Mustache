@@ -1,0 +1,22 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+
+<title>Perfect Blog: {{title}}</title>
+
+{{> style}}
+
+</head>
+<body>
+	<div id="header">
+		<h3>
+			<img id="logo" src="/perfect-2.0.png" height="58" alt="Perfect Logo">
+			{{title}}
+		</h3>
+	</div>
+	<div id="content">
+		<div>{{{body}}}</div>
+		<a href="/">(Back)</a>
+	</div>
+</body>
+</html>
