@@ -1,4 +1,4 @@
-# Perfect Blog Mustache Example[简体中文](README.zh_CN.md)
+# Perfect Blog 以及 Mustache 模板使用示例 [English](README.md)
 
 <p align="center">
     <a href="http://perfect.org/get-involved.html" target="_blank">
@@ -39,59 +39,61 @@
     </a>
 </p>
 
-An Example Blog & Mustache Template System for Perfect
+基于 Perfect 的 Blog 搭建和 Mustache 模板使用示例
 
-This project demonstrates the following:
+本示例展示了：
 
-* Mustache templating
-* URL routing and handlers
+* Mustache 模板使用
+* URL routing 以及 handlers
 * URL Variables
-* Static file serving
-* SQLite3 database setup, and search.
+* Static file 服务
+* SQLite3 数据库相关操作
 
-This package builds with Swift Package Manager and is part of the [Perfect](https://github.com/PerfectlySoft/Perfect) project.
+此工程由 Swift Package Manager 构建，Swift Package Manager 来自于 [Perfect](https://github.com/PerfectlySoft/Perfect) 
 
-Ensure you have installed Xcode 8.0 or later.
+确保你的 Xcode 版本在 8.0以上。
 
-## Setup - Xcode 8
+## 准备工作 - 使用 Xcode 8
 
-* Check out or download the project;
-* In terminal, navigate to the directory and execute
+* 导出或者下载此工程
+* 在命令台，导航到目录并执行：
 
 ```
 swift package generate-xcodeproj
 ```
 
-* Open `Perfect-Blog-Mustache.xcodeproj`
+* 打开 `Perfect-Blog-Mustache.xcodeproj`
 
-Due to the complexity of running static file serving from Xcode, we suggest running this project from Terminal.
+由于从 Xcode 运行静态文件的复杂性，我们建议从终端运行这个项目。
 
-## Setup - Terminal
+## 准备工作 - 使用终端
 
-* Check out or download the project;
-* In terminal, navigate to the directory 
-* Execute `swift build`
-* Once the project has compiled, execute `./.build/debug/Perfect-Blog-Mustache`
+* 导出或下载工程
+* 在终端中，导航到工程目录
+* 执行 `swift build`
+* 当 build 结束执行 `./.build/debug/Perfect-Blog-Mustache`
+
+您将会看到如下输出：
 
 ```
 [INFO] Starting HTTP server on 0.0.0.0:8181 with document root ./webroot
 ```
 
-## Routes
+## 已包含的路由
 
-* [http://localhost:8181](http://localhost:8181) - Generates the list of blog posts
-* http://localhost:8181/story/{storyid} - Linked to from the blog list, this displays the detail of the blog post.
+* [http://localhost:8181](http://localhost:8181) - 博客文章列表页
+* http://localhost:8181/story/{storyid} - 可从博客文章列表页中找到，展示博文详情
 
-## Issues
+## 问题报告
 
-We are transitioning to using JIRA for all bugs and support related issues, therefore the GitHub issues has been disabled.
+目前我们已经把所有错误报告合并转移到了 JIRA 上，因此 github 原有的错误汇报功能不能用于本项目。
 
-If you find a mistake, bug, or any other helpful suggestion you'd like to make on the docs please head over to [http://jira.perfect.org:8080/servicedesk/customer/portal/1](http://jira.perfect.org:8080/servicedesk/customer/portal/1) and raise it.
+您的任何宝贵建意见或建议，或者发现我们的程序有问题，欢迎您在这里告诉我们。[http://jira.perfect.org:8080/servicedesk/customer/portal/1](http://jira.perfect.org:8080/servicedesk/customer/portal/1)
 
-A comprehensive list of open issues can be found at [http://jira.perfect.org:8080/projects/ISS/issues](http://jira.perfect.org:8080/projects/ISS/issues)
+目前问题清单请参考以下链接：[http://jira.perfect.org:8080/projects/ISS/issues](http://jira.perfect.org:8080/projects/ISS/issues)
 
 
-## Further Information
-For more information on the Perfect project, please visit [perfect.org](http://perfect.org).
+## 更多内容
+关于 Perfect 更多内容，请参考 [perfect.org](http://perfect.org) 官网。
 
 
