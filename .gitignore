@@ -65,3 +65,6 @@ fastlane/screenshots
 Packages/
 *.xcodeproj
 blog-database
+.build_lin
+Package.resolved
+PADockerfile_build

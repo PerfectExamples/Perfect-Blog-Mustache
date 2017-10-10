@@ -7,7 +7,7 @@
 //
 
 import PerfectLib
-import SQLite
+import PerfectSQLite
 import PerfectHTTP
 import PerfectMustache
 import SwiftString
