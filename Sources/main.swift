@@ -57,7 +57,7 @@ routes.add(method: .get, uri: "/", handler: {
 routes.add(method: .get, uris: ["/story","/story/{titleSanitized}"], handler: {
 	request, response in
 
-	let titleSanitized = request.urlVariables["titlesanitized"] ?? ""
+	let titleSanitized = request.urlVariables["titleSanitized"] ?? ""
 
 	// Setting the response content type explicitly to text/html
 	response.setHeader(.contentType, value: "text/html")

@@ -64,7 +64,7 @@ struct StoryHandler: MustachePageHandler { // all template handlers must inherit
 	func extendValuesForResponse(context contxt: MustacheWebEvaluationContext, collector: MustacheEvaluationOutputCollector) {
 		var values = MustacheEvaluationContext.MapType()
 		let request = contxt.webRequest
-		let titleSanitized = request.urlVariables["titlesanitized"] ?? ""
+		let titleSanitized = request.urlVariables["titleSanitized"] ?? ""
 
 		let dbHandler = DB()
 		let data = dbHandler.getStory(titleSanitized)
