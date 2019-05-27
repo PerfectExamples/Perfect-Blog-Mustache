@@ -21,6 +21,7 @@ import PerfectHTTP
 import PerfectHTTPServer
 import PerfectMustache
 
+
 // Create HTTP server.
 let server = HTTPServer()
 
@@ -62,7 +63,7 @@ routes.add(method: .get, uris: ["/story","/story/{titleSanitized}"], handler: {
 	// Setting the response content type explicitly to text/html
 	response.setHeader(.contentType, value: "text/html")
 
-	if titleSanitized.characters.count > 0 {
+	if !titleSanitized.isEmpty  {
 		// Setting the body response to the generated list via Mustache
 		mustacheRequest(
 			request: request,
