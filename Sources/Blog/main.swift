@@ -20,13 +20,14 @@ import PerfectLib
 import PerfectHTTP
 import PerfectHTTPServer
 import PerfectMustache
+import Foundation
 
 // Create HTTP server.
 let server = HTTPServer()
 
 // Set the webroot directory so static files such as the logo, can be served
-server.documentRoot = "./webroot"
-
+server.documentRoot = Bundle.module.bundlePath + "/Contents/Resources/Resources"
+print(server.documentRoot)
 // Create the container variable for routes to be added to.
 var routes = Routes()
 
@@ -62,7 +63,7 @@ routes.add(method: .get, uris: ["/story","/story/{titleSanitized}"], handler: {
 	// Setting the response content type explicitly to text/html
 	response.setHeader(.contentType, value: "text/html")
 
-	if titleSanitized.characters.count > 0 {
+    if titleSanitized.count > 0 {
 		// Setting the body response to the generated list via Mustache
 		mustacheRequest(
 			request: request,

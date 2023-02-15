@@ -68,3 +68,4 @@ blog-database
 .buil*
 Package.resolved
 PADockerfile_build
+.swiftpm
